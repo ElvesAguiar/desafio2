@@ -2,6 +2,9 @@ package com.elves.desafio2.entities;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name = "tb_participante")
 public class Participante {
@@ -11,6 +14,9 @@ public class Participante {
     private Integer id;
     private String nome;
     private String email;
+
+    @ManyToMany(mappedBy = "participantes")
+    private List<Atividade> atividades = new ArrayList<>();
 
     public Participante(){
 
