@@ -26,6 +26,9 @@ public class Atividade {
             inverseJoinColumns = @JoinColumn(name = "participante_id"))
     private List<Participante> participantes = new ArrayList<>();
 
+    @OneToMany(mappedBy = "atividade")
+    private List<Bloco> blocos = new ArrayList<>();
+
 
     public Atividade(){
 
@@ -88,5 +91,13 @@ public class Atividade {
 
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
+    }
+
+    public List<Participante> getParticipantes() {
+        return participantes;
+    }
+
+    public List<Bloco> getBlocos() {
+        return blocos;
     }
 }

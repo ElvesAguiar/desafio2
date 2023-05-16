@@ -15,6 +15,10 @@ public class Bloco {
     private Date inicio;
     private Date fim;
 
+    @ManyToOne
+    @JoinColumn(name = "bloco_id")
+    private Atividade atividade;
+
 
     public Bloco(){
 
