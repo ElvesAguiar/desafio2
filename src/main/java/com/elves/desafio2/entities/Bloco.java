@@ -11,12 +11,13 @@ public class Bloco {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
+    @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Date inicio;
+    @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Date fim;
 
     @ManyToOne
-    @JoinColumn(name = "bloco_id")
+    @JoinColumn(name = "atividade_id")
     private Atividade atividade;
 
 
