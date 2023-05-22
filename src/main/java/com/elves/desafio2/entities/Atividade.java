@@ -68,14 +68,7 @@ public class Atividade {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-
-    public Double getPrice() {
-        return preco;
-    }
-
-    public void setPrice(Double price) {
-        this.preco = preco;
-    }
+    
 
     public Double getPreco() {
         return preco;
